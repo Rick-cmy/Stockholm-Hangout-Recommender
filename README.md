@@ -26,7 +26,7 @@ Instead of a traditional binary classification, we formulate the problem as a **
 > Given upcoming events in Stockholm, predict a **relative score** indicating how suitable each event is as a hangout, and recommend the Top-K events.
 
 ### Why ranking instead of classification?
-In real-world event platforms, almost all upcoming events are marked as *on sale*, which leads to extremely imbalanced labels if treated as a binary classification problem.  
+At the beginning, I tried to treat this project as a classification problem. However, in real-world event platforms, almost all upcoming events are marked as *on sale*, which leads to extremely imbalanced labels if treated as a binary classification problem.  
 To handle this realistic constraint, we model the problem as a **scoring task**, where the model learns to rank events rather than make hard yes/no decisions.
 
 ---
