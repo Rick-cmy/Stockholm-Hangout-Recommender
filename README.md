@@ -88,7 +88,8 @@ stockholm-hangout-ml/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
+```
+---
 ## 7. How to Run the Project
 
 Follow the steps below to run the project end-to-end.
@@ -143,7 +144,7 @@ Start the Streamlit web application to view the recommendations:
 ```bash
 streamlit run app.py
 ```
-
+---
 ## 8. Summary
 
 This project implements a complete **end-to-end machine learning pipeline** for event recommendation using dynamic real-world data.
@@ -156,7 +157,7 @@ The system:
 - Presents results through an interactive user interface
 
 By formulating the problem as a **scoring and ranking task**, the project reflects realistic constraints of real-world event platforms and demonstrates practical machine learning system design.
-
+---
 ## 9. Future Work
 
 Several directions can be explored to further improve this project:
