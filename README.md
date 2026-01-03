@@ -32,16 +32,16 @@ To handle this realistic constraint, we model the problem as a **scoring task**,
 ---
 
 ## 3. Machine Learning Approach
-We train a **supervised scoring model** that learns a continuous score from event metadata and time-related features.
 
-- Model: **Ridge Regression**
-- Learning objective: Learn a scoring function  
-  \[
-  f(\text{event features}) \rightarrow \text{hangout score}
-  \]
-- The output score is used to rank events, and the top-ranked events are recommended.
+We formulate the task as a **supervised scoring and ranking problem**.  
+The model learns a continuous score from event metadata and time-related features, which is later used to rank upcoming events.
 
-Although the target score is a proxy (constructed from time-related preferences), the model **learns feature weights from real data**, fulfilling the ML requirement of the course.
+- **Model:** Ridge Regression
+- **Objective:** Learn a scoring function that maps event features to a real-valued hangout score
+- **Usage:** Events are ranked by the predicted score, and the top-ranked events are recommended to users
+
+A regression-based scoring approach is chosen instead of binary classification because real-world event data is highly imbalanced, with most upcoming events marked as "on sale".  
+By learning a continuous scoring function, the model captures relative preferences between events and produces meaningful rankings under realistic data constraints.
 
 ---
 
